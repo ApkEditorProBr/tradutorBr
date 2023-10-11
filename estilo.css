@@ -1,10 +1,7 @@
 /* Estilização do fundo da página */
 body {
   font-size: 15px;
-  background-size: cover;
-  background-image: url(fundo);
-  background-repeat: no-repeat;
-  color: #fff;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
