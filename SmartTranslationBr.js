@@ -1676,7 +1676,8 @@ function loadTranslation() {
  || chunk.includes("())")
  || chunk.includes("(false)")
  || chunk.includes("(true)")
- || chunk.includes("return ")) {
+ || chunk.includes("return ")
+ || chunk.includes("private ")) {
       return Promise.resolve(chunk); 
     } else {
       //Url da api de tradução do google
