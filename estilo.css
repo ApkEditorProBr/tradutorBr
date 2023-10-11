@@ -1,15 +1,16 @@
 /* Estilização do fundo da página */
 body {
   font-size: 15px;
-  background-color: none;
+  background-size: cover;
+  background-image: url(fundo);
+  background-repeat: no-repeat;
   color: #fff;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   user-select: none;
   height: 100vh;
 }
-
 .container {
   margin: 0 auto;
   padding: 20px;
