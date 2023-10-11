@@ -37,7 +37,7 @@ h1 {
 #textareaTo {
  font-family: 'Courier New', Courier, monospace;
  background-color: black;
- border: 2px solid black;
+ border: 2px solid white;
  border-radius: 5px;
  box-shadow: 0 0 4px #666;
  width: 89%;
