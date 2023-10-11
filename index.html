@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css">
+  <!--Meu js-->
+  <script src="SmartTranslationBr.js" deter></script>
+  <title>Tradutor</title>
+</head>
+<body>
+  <div class="container">
+    <h1>TRADUTOR</h1>
+    <div class="content">
+      <div class="divSelects">
+        <select class="selectFrom"></select>
+        <select class="selectTo"></select>
+        <button id="btnLoadFile">CARREGAR ARQUIVO</button>
+        <input type="file" id="fileInput" style="display: none;">
+      </div>
+      <div class="divTextareas">
+        <textarea id="textareaFrom" rows="8" placeholder="Digitar texto"></textarea>
+        <textarea id="textareaTo" rows="8" placeholder="TRADUÇÃO..." disabled></textarea>
+      </div>
+      </br>
+      <div class="divButtons">
+        <button id="btnTranslate">TRADUZIR</button>
+        <button id="btnDownload" disabled>BAIXAR</button>
+      </div>
+    <div class="loading" style="display: none;">Carregando...</div>
+    </div>
+    </br><input type="checkbox" id="RemoverTags" onchange="RemoverTags()">
+	<label for="RemoverTags">Remover tag html</label>
+  </div>
+<!-- Meu js -->
+<script src="script.js"></script>
+</body>
+</html>

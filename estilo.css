@@ -1,0 +1,119 @@
+/* Estilização do fundo da página */
+body {
+  font-size: 15px;
+  background-color: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  height: none;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-family: serif;
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#textareaFrom {
+ background-color: black;
+ width: 100%;
+ height: 0px;
+ visibility: hidden;
+ diplay: none;
+}
+
+#textareaTo {
+ font-family: Arial, sans-serif;
+ background-color: black;
+ border: 2px solid black;
+ border-radius: 5px;
+ box-shadow: 0 0 4px #666;
+ width: 100%;
+ height: 50%;
+ font-size: 12px;
+ padding: 15px;
+}
+
+.selectFrom {
+  margin-left: -88px;
+  visibility: hidden;
+  diplay: none;
+}
+
+select {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 4px #666;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 5px;
+}
+
+select:hover {
+  background-color: #ADE1F5;
+  border: 2px solid #ADE1F5;
+  color: black;
+}
+
+#btnLoadFile {
+  margin-left: none;
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 4px #666;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+#btnLoadFile:hover {
+  background-color: #ADE1F5;
+  border: 2px solid #ADE1F5;
+  color: black;
+}
+
+#btnTranslate {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 4px #666;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+#btnTranslate:hover {
+  background-color: #ADE1F5;
+  border: 2px solid #ADE1F5;
+  color: black;
+}
+
+#btnDownload {
+ background-color: #EEEEEE;
+  border: 2px solid #EEEEEE;
+  box-shadow: 0 0 4px #666;
+  border-radius: 5px;
+  color: black;
+}
+
+#btnDownload:hover {
+  background-color: #ADE1F5;
+  border: 2px solid #ADE1F5;
+  color: black;
+}
+
+.loading {
+ margin-left: 53%;
+ margin-top: -20;
+   }
+}
