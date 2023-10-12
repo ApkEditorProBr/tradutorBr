@@ -24,13 +24,18 @@
       </div>
       </br>
       <div class="divButtons">
+    <i class="loading" style="display: none;">Carregando...</i>
         <button id="btnTranslate">TRADUZIR</button>
         <button id="btnDownload" disabled>BAIXAR</button>
       </div>
-    <div class="loading" style="display: none;">Carregando...</div>
     </div>
-    </br><input type="checkbox" id="RemoverTags" onchange="RemoverTags()">
+  <input type="checkbox" id="SemPreservar" onchange="SemPreservar()">
+	<label for="SemPreservar">Modo livre</label>
+ <i class="aviso" style="display: none;">Carregando...</i>
+    </br>
+   <input type="checkbox" id="RemoverTags" onchange="RemoverTags()">
 	<label for="RemoverTags">Remover tag html</label>
+  </br>
   </div>
 <!-- Meu js -->
 <script src="script.js"></script>
