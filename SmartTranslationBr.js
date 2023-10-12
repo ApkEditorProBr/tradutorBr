@@ -5,7 +5,8 @@ function loadTranslation() {
       //Definir o'que não pode ser traduzido
     if (
   //Tags html
-  chunk.includes("</a>")
+  chunk.includes("<a>")
+ || chunk.includes("</a>")
  || chunk.includes("<b>")
  || chunk.includes("</b>")  
  || chunk.includes("<abbr>")
@@ -126,8 +127,6 @@ function loadTranslation() {
  || chunk.includes("</h5>")
  || chunk.includes("<h6>")
  || chunk.includes("</h6>")
- || chunk.includes("<i>")
- || chunk.includes("</i>")
  || chunk.includes("<iframe>")
  || chunk.includes("</iframe>")
  || chunk.includes("<img>")
@@ -278,6 +277,7 @@ function loadTranslation() {
  || chunk.includes("</video>")
  || chunk.includes("<wbr>")
  || chunk.includes("</wbr>")
+ || chunk.includes("<A>")
  || chunk.includes("</A>")
  || chunk.includes("<B>")
  || chunk.includes("</B>")
@@ -407,8 +407,6 @@ function loadTranslation() {
  || chunk.includes("</INPUT>")
  || chunk.includes("<INS>")
  || chunk.includes("</INS>")
- || chunk.includes("<I>")
- || chunk.includes("</I>")
  || chunk.includes("<ISINDEX>")
  || chunk.includes("</ISINDEX>")
  || chunk.includes("<KBD>")
