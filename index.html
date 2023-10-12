@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="stylesheet" href="estilo.css">
   <!--Meu js-->
-  <script src="SmartTranslationBr.js" deter></script>
+  <script src="SmartTranslationBr.js" defer></script>
   <title>Tradutor</title>
 </head>
 <body>
@@ -24,18 +24,19 @@
       </div>
       </br>
       <div class="divButtons">
-    <i class="loading" style="display: none;">Carregando...</i>
+        <i class="loading" style="display: none;">Carregando...</i>
+        </br>
         <button id="btnTranslate">TRADUZIR</button>
         <button id="btnDownload" disabled>BAIXAR</button>
       </div>
     </div>
-  <input type="checkbox" id="SemPreservar" onchange="SemPreservar()">
-	<label for="SemPreservar">Modo livre</label>
- <i class="aviso" style="display: none;">Carregando...</i>
     </br>
-   <input type="checkbox" id="RemoverTags" onchange="RemoverTags()">
-	<label for="RemoverTags">Remover tag html</label>
-  </br>
+    <input type="checkbox" id="RemoverTags" onchange="RemoverTags()">
+	  <label for="RemoverTags">Remover tag html</label>
+    <br>
+   </br>
+Insira a tag para não ser traduzida:</br>
+   <input type="text" id="additionalTagsInput" value="html,head,body">
   </div>
 <!-- Meu js -->
 <script src="script.js"></script>
