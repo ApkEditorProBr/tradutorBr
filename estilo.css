@@ -110,8 +110,16 @@ select:hover {
   color: black;
 }
 
-#SemPreservar {
- margin-top: 15;
+#additionalTagsInput {
+  background-color: white;
+  border: none;
+  box-shadow: 0 0 4px #666;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: none;
+  font-family: Arial, sans-serif;
+  color: black;
+  outline: none;
 }
 
 #RemoverTags {
