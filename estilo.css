@@ -6,7 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   user-select: none;
-  height: 100vh;
+  height: none;
 }
 .container {
   margin: 0 auto;
