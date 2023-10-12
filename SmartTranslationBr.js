@@ -8,7 +8,7 @@ function loadTranslation() {
     // Verifica se o checkbox está marcado
     if (checkbox.checked) {
       // Exibe um alerta
-      alert("⚠️Ao habilitar esta opção, todo o conteúdo do arquivo será traduzido sem restrigir tags; atributos etc... Clique em traduzir novamente")
+      alert("⚠️Ao habilitar esta opção, todo o conteúdo do arquivo será traduzido sem restrigir tags; atributos etc...")
     }
   }, 10);
   const textChunks = textareaFrom.value.match(/.{1,3000}/g);
