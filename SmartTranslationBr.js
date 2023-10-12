@@ -1,14 +1,20 @@
 function loadTranslation() {
-  loadingDiv.style.display = "block";
+    loadingDiv.style.display = "block";
+  // Adicionar um pequeno atraso antes de exibir a div de carregamento
+  setTimeout(() => {
+    // Obtém o elemento checkbox
+    const checkbox = document.getElementById("SemPreservar");
+
+    // Verifica se o checkbox está marcado
+    if (checkbox.checked) {
+      // Exibe um alerta
+    }
+  }, 10);
   const textChunks = textareaFrom.value.match(/.{1,3000}/g);
   const promises = textChunks.map((chunk) => {
-      //Definir o'que não pode ser traduzido
-    if (
-  //Tags html
-  chunk.includes("<a>")
- || chunk.includes("</a>")
- || chunk.includes("<b>")
- || chunk.includes("</b>")  
+    if (!document.getElementById("SemPreservar").checked) {
+      // Tags html
+      if (chunk.includes("<a>") || chunk.includes("</a>")    
  || chunk.includes("<abbr>")
  || chunk.includes("</abbr>")
  || chunk.includes("<address>")
@@ -25,6 +31,8 @@ function loadTranslation() {
  || chunk.includes("</acronym>")
  || chunk.includes("<applet>")
  || chunk.includes("</applet>")
+ || chunk.includes("<b>")
+ || chunk.includes("</b>")
  || chunk.includes("<base>")
  || chunk.includes("</base>")
  || chunk.includes("<basefont>")
@@ -127,6 +135,9 @@ function loadTranslation() {
  || chunk.includes("</h5>")
  || chunk.includes("<h6>")
  || chunk.includes("</h6>")
+ || chunk.includes("<i>")
+ || chunk.includes("</i>")
+  && chunk.includes("id=")
  || chunk.includes("<iframe>")
  || chunk.includes("</iframe>")
  || chunk.includes("<img>")
@@ -279,10 +290,6 @@ function loadTranslation() {
  || chunk.includes("</wbr>")
  || chunk.includes("<A>")
  || chunk.includes("</A>")
- || chunk.includes("<B>")
- || chunk.includes("</B>")
- || chunk.includes("<ABBR>")
- || chunk.includes("</ABBR>")
  || chunk.includes("<ADDRESS>")
  || chunk.includes("</ADDRESS>")
  || chunk.includes("<AREA>")
@@ -297,6 +304,10 @@ function loadTranslation() {
  || chunk.includes("</ACRONYM>")
  || chunk.includes("<APPLET>")
  || chunk.includes("</APPLET>")
+ || chunk.includes("<ABBR>")
+ || chunk.includes("</ABBR>")
+ || chunk.includes("<B>")
+ || chunk.includes("</B>")
  || chunk.includes("<BASE>")
  || chunk.includes("</BASE>")
  || chunk.includes("<BASEFONT>")
@@ -407,6 +418,8 @@ function loadTranslation() {
  || chunk.includes("</INPUT>")
  || chunk.includes("<INS>")
  || chunk.includes("</INS>")
+ || chunk.includes("<I>")
+ || chunk.includes("</I>")
  || chunk.includes("<ISINDEX>")
  || chunk.includes("</ISINDEX>")
  || chunk.includes("<KBD>")
@@ -549,7 +562,8 @@ function loadTranslation() {
  || chunk.includes("</VIDEO>")
  || chunk.includes("<WBR>")
  || chunk.includes("</WBR>")
-
+ 
+ //Simbolos
  //Propriedade css
  || chunk.includes("align-content:")
  || chunk.includes("align-items:")
@@ -2163,28 +2177,29 @@ function loadTranslation() {
  || chunk.includes("false;")
  || chunk.includes("return ")
  || chunk.includes("private ")) {
-      return Promise.resolve(chunk); 
-    } else {
-      //Url da api de tradução do google
-      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${selects[0].value}&tl=${selects[1].value}&dt=t&q=${encodeURIComponent(chunk)}`;
-      return fetch(url)
-        .then((res) => res.json())
-        .then((data) => {
-          const translatedText = data[0].map(([text]) => text).join("\n");
-          textareaTo.style.color = "white";
-          return translatedText;
-        })
-        .catch(() => {
-          if (true) {
-            return "";
-          } else {
-            return "⚠️Erro desconhecido";
-          }
-        });
+        return Promise.resolve(chunk);
+      }
     }
+    
+    // Url da api de tradução do google
+    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${selects[0].value}&tl=${selects[1].value}&dt=t&q=${encodeURIComponent(chunk)}`;
+    return fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        const translatedText = data[0].map(([text]) => text).join("\n");
+        textareaTo.style.color = "white";
+        return translatedText;
+      })
+      .catch(() => {
+        if (true) {
+          return "";
+        } else {
+          return "⚠️Erro desconhecido";
+        }
+      });
   });
   
-    Promise.all(promises)
+  Promise.all(promises)
     .then((translations) => {
       textareaTo.value = translations.join("\n");
       btnDownload.disabled = false;
