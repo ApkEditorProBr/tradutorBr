@@ -5,10 +5,9 @@ function loadTranslation() {
       //Definir o'que não pode ser traduzido
     if (
   //Tags html
-  chunk.includes("<a>")
   chunk.includes("</a>")
  || chunk.includes("<b>")
- || chunk.includes("</b>")
+ || chunk.includes("</b>")  
  || chunk.includes("<abbr>")
  || chunk.includes("</abbr>")
  || chunk.includes("<address>")
@@ -279,7 +278,6 @@ function loadTranslation() {
  || chunk.includes("</video>")
  || chunk.includes("<wbr>")
  || chunk.includes("</wbr>")
- || chunk.includes("<A>")
  || chunk.includes("</A>")
  || chunk.includes("<B>")
  || chunk.includes("</B>")
