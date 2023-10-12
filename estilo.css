@@ -110,6 +110,14 @@ select:hover {
   color: black;
 }
 
+#SemPreservar {
+ margin-top: 15;
+}
+
+#RemoverTags {
+ margin-top: 8;
+}
+
 .loading {
    }
 }
