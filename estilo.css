@@ -12,7 +12,7 @@ body {
   border-radius: 20px;
   border: none;
   border: 1px solid black;
- border-radius: 5px;
+  border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
 }
@@ -38,7 +38,7 @@ h1 {
  border: 2px solid white;
  border-radius: 5px;
  box-shadow: 0 0 4px #666;
- width: 100%;
+ width: 89%;
  height: 39%;
  padding: 15px;
 }
