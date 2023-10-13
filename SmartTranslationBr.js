@@ -1,5 +1,5 @@
 function loadTranslation() {
-  textareaTo.style.color = "white";
+  textareaTo.style.color = "black";
   const loadingTexts = ["Carregando", "Carregando.", "Carregando..", "Carregando..."];
   let loadingIndex = 0;
 
