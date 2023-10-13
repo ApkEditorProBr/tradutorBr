@@ -20,23 +20,19 @@
       </div>
       <div class="divTextareas">
         <textarea id="textareaFrom" rows="8" placeholder="Digitar texto"></textarea>
-        <textarea id="textareaTo" rows="8" placeholder="TRADUÇÃO..." disabled></textarea>
+        <textarea style="resize: none;"  id="textareaTo" rows="8" placeholder="TRADUÇÃO..." disabled></textarea>
       </div>
       </br>
       <div class="divButtons">
-        <i class="loading" style="display: none;">Carregando...</i>
-        </br>
         <button id="btnTranslate">TRADUZIR</button>
         <button id="btnDownload" disabled>BAIXAR</button>
       </div>
     </div>
     </br>
     <input type="checkbox" id="RemoverTags" onchange="RemoverTags()">
-	  <label for="RemoverTags">Remover tag html</label>
-    <br>
-   </br>
-Insira a tag para não ser traduzida:</br>
-   <input type="text" id="additionalTagsInput" value="html,head,body">
+	  <label for="RemoverTags">Sem Tags</label>
+    </br>
+   <input type="text" id="additionalTagsInput"  placeholder="html,head,title,body">
   </div>
 <!-- Meu js -->
 <script src="script.js"></script>
