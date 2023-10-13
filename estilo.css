@@ -38,7 +38,7 @@ h1 {
  border: 2px solid white;
  border-radius: 5px;
  box-shadow: 0 0 4px #666;
- width: 100%;
+ width: 89%;
  height: 40%;
  padding: 15px;
 }
@@ -110,7 +110,7 @@ input {
 
 #additionalTagsInput {
  width: 100%;
- height: 1%;
+ height: 5px;
  padding: 12px 20px;
  margin: 8px 0;
  display: inline-block;
