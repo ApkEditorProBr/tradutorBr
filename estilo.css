@@ -5,15 +5,14 @@ body {
   justify-content: center;
   align-items: center;
   user-select: none;
+  max-width: 600px;
   height: 100vh;
 }
 
 .container {
   height: 580px;
-  border-radius: 20px;
-  border: none;
+  border-radius: 10px;
   border: 1px solid black;
-  border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
 }
@@ -27,28 +26,28 @@ h1 {
 }
 
 #textareaFrom {
- background-color: black;
- width: 100%;
- height: 0px;
- visibility: hidden;
- diplay: none;
+  background-color: black;
+  width: 100%;
+  height: 0px;
+  visibility: hidden;
+  display: none;
 }
 
 #textareaTo {
- color: black;
- background-color: white;
- border: 2px solid white;
- border-radius: 5px;
- box-shadow: 0 0 4px #666;
- width: 89%;
- height: 230px;
- padding: 15px;
+  color: black;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  box-shadow: 0 0 4px #666;
+  width: 89%;
+  height: 230px;
+  padding: 15px;
 }
 
 .selectFrom {
   margin-left: -88px;
   visibility: hidden;
-  diplay: none;
+  display: none;
 }
 
 select {
@@ -111,19 +110,19 @@ input {
 }
 
 #additionalTagsInput {
- width: 100%;
- height: 5px;
- padding: 12px 20px;
- margin: 8px 0;
- display: inline-block;
- border: 2px solid white;
- border-radius: 5px;
- box-shadow: 0 0 4px #666;
- box-sizing: border-box;
- outline: none;
+  width: 100%;
+  height: 5px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 5px;
+  box-shadow: 0 0 4px #666;
+  box-sizing: border-box;
+  outline: none;
 }
 
-RemoverTags {
- margin-top: 7;
-  }
+#RemoverTags {
+  margin-top: 7;
+   }
 }
