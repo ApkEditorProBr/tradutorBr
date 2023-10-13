@@ -10,8 +10,8 @@ body {
 }
 
 .container {
-  height: 580px;
-  border-radius: 10px;
+  height: none;
+  border-radius: 5px;
   border: 1px solid black;
   background-color: #f2f2f2;
   padding: 20px;
@@ -57,12 +57,7 @@ select {
   border: 2px solid white;
   outline: none;
   border-radius: 5px;
-}
-
-select:hover {
-  background-color: #ADE1F5;
-  border: 2px solid #ADE1F5;
-  color: black;
+  cursor: pointer;
 }
 
 #btnLoadFile {
@@ -72,34 +67,23 @@ select:hover {
   box-shadow: 0 0 4px #666;
   border: 2px solid white;
   border-radius: 5px;
-}
-
-#btnLoadFile:hover {
-  background-color: #ADE1F5;
-  border: 2px solid #ADE1F5;
-  color: black;
+  cursor: pointer;
 }
 
 #btnTranslate {
-  width: 100%;
-  background-color: #1899DC;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+ background-color: #1899DC;
+ color: white;
   box-shadow: 0 0 4px #666;
-  border: none;
+  border: 2px solid #1899DC;;
   border-radius: 5px;
   cursor: pointer;
 }
 
 #btnDownload {
-  width: 100%;
-  background-color: #1899DC;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+ background-color: #1899DC;
+ color: white;
   box-shadow: 0 0 4px #666;
-  border: none;
+  border: 2px solid #1899DC;;
   border-radius: 5px;
   cursor: pointer;
 }
