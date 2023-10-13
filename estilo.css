@@ -1,32 +1,26 @@
 /* Estilização do fundo da página */
 body {
-  font-size: 15px;
-  background-size: cover;
-  background-image: url(fundo);
-  background-repeat: no-repeat;
-  color: #fff;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
   height: 100vh;
 }
-
 .container {
-  height: 500px;
   margin: 0 auto;
   padding: 20px;
-  background-color: rgb(255, 255, 255, 0.2);
+  background-color: white;
   color: black;
   border-radius: 5px;
-  border: 2px solid black;
-  box-shadow: 0px 0px 5px #666;
+  border: 1px solid black;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   font-family: serif;
   font-size: 24px;
-  color: #DDDEE1;
+  color: black;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -49,7 +43,6 @@ h1 {
  height: 250px;
  font-size: 12px;
  padding: 15px;
- color: white;
 }
 
 .selectFrom {
@@ -59,66 +52,73 @@ h1 {
 }
 
 select {
-  background-color: black;
+  background-color: white;
+  color: black;
   box-shadow: 0 0 4px #666;
-  border: 2px solid black;
-  color: white;
+  border: 2px solid white;
   outline: none;
   border-radius: 5px;
 }
 
 select:hover {
-  background-color: black;
-  border: 2px solid black;
-  color: white;
+  background-color: #ADE1F5;
+  border: 2px solid #ADE1F5;
+  color: black;
 }
 
 #btnLoadFile {
-  background-color: black;
-  border: 2px solid black;
-  box-shadow: 0 0 4px #666;
-  color: white;
   margin-left: none;
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 4px #666;
+  border: 2px solid white;
   border-radius: 5px;
+}
+
+#btnLoadFile:hover {
+  background-color: #ADE1F5;
+  border: 2px solid #ADE1F5;
+  color: black;
 }
 
 #btnTranslate {
-  background-color: black;
-  border: 2px solid black;
+  background-color: white;
+  color: black;
   box-shadow: 0 0 4px #666;
-  color: white;
+  border: 2px solid white;
   border-radius: 5px;
+}
+
+#btnTranslate:hover {
+  background-color: #ADE1F5;
+  border: 2px solid #ADE1F5;
+  color: black;
 }
 
 #btnDownload {
- background-color: black;
-  border: 2px solid black;
+ background-color: #EEEEEE;
+  border: 2px solid #EEEEEE;
   box-shadow: 0 0 4px #666;
   border-radius: 5px;
-  color: white;
+  color: black;
 }
 
-#additionalTagsInput {
-  background-color: black;
-  border: none;
-  box-shadow: 0 0 4px #666;
+#btnDownload:hover {
+  background-color: #ADE1F5;
+  border: 2px solid #ADE1F5;
+  color: black;
+}
+
+input {
+  border: 1px solid black;
   border-radius: 5px;
-  padding: 5px;
-  font-size: none;
-  font-family: Arial, sans-serif;
-  color: white;
-  outline: none;
 }
 
 #additionalTagsInput::placeholder {
- color: white;
-}
-
-label {
- color: red;
+ color: black;
 }
 
 RemoverTags {
  margin-top: 7;
-   }
+  }
 }
