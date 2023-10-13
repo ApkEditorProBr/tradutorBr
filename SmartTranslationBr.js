@@ -1,5 +1,7 @@
 function loadTranslation() {
-  loadingDiv.style.display = "block";
+  textareaTo.style.color = "white";
+  const loadingTexts = ["Carregando", "Carregando.", "Carregando..", "Carregando..."];
+  let loadingIndex = 0;
 
   const additionalTags = document.getElementById("additionalTagsInput").value;
   const additionalTagsArray = additionalTags.split(",").map(tag => tag.trim());
@@ -1674,22 +1676,26 @@ function loadTranslation() {
       .then((res) => res.json())
       .then((data) => {
         const translatedText = data[0].map(([text]) => text).join("\n");
-        textareaTo.style.color = "white";
         return translatedText;
       })
       .catch(() => "");
   });
-  
+
+  const loadingInterval = setInterval(() => {
+    textareaTo.value = loadingTexts[loadingIndex];
+    loadingIndex = (loadingIndex + 1) % loadingTexts.length;
+  }, 500);
+
   Promise.all(promises)
     .then((translations) => {
+      clearInterval(loadingInterval);
       textareaTo.value = translations.join("\n");
       btnDownload.disabled = false;
-      loadingDiv.style.display = "none";
     })
     .catch((error) => {
+      clearInterval(loadingInterval);
       textareaTo.value = "";
       btnDownload.disabled = true;
-      loadingDiv.style.display = "none";
       console.error(error);
     });
 }
