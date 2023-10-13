@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  height: 94%;
+  height: none;
   border-radius: 20px;
   border: none;
   border: 1px solid black;
