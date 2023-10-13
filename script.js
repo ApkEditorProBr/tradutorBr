@@ -1,5 +1,4 @@
 //Selecionando elementos da página
-const textareaFrom = document.querySelector("#textareaFrom");
 const textareaTo = document.querySelector("#textareaTo");
 const btnTranslate = document.querySelector("#btnTranslate");
 const btnLoadFile = document.querySelector("#btnLoadFile");
@@ -42,7 +41,7 @@ for (let i = 0; i < selects.length; i++) {
 
 //Evento de click do botão Translate
 btnTranslate.addEventListener("click", () => {
-  if (textareaFrom.value) {
+  if (textareaTo.value) {
     loadTranslation();
   } else {
     textareaTo.value = "⚠️Não há nada!";
@@ -62,7 +61,7 @@ fileInput.addEventListener("change", () => {
   if (file) {
     const reader = new FileReader();
     reader.onload = function (e) {
-      textareaFrom.value = e.target.result;
+      textareaTo.value = e.target.result;
     };
     reader.readAsText(file);
   }
