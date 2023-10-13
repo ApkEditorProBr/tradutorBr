@@ -8,7 +8,8 @@ function loadTranslation() {
 
   const textChunks = textareaFrom.value.match(/.{1,3000}/g);
   const promises = textChunks.map((chunk) => {
-    const includesTags = additionalTagsArray.some(tag => chunk.includes(`<${tag}>`) || chunk.includes(`</${tag}>`)
+    const includesTags = additionalTagsArray.some(tag => chunk.includes(`<${tag}>`)
+ || chunk.includes(`</${tag}>`)
     
  //Expressões regulares(regex)
  || chunk.includes("xml.*?>/")
