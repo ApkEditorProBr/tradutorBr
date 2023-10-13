@@ -26,6 +26,14 @@ h1 {
   margin-bottom: 20px;
 }
 
+#textareaFrom {
+ background-color: black;
+ width: 100%;
+ height: 0px;
+ visibility: hidden;
+ diplay: none;
+}
+
 #textareaTo {
  color: black;
  background-color: white;
