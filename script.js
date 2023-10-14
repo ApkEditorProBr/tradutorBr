@@ -16,7 +16,7 @@ const countries = {
   "ja": "Japonês",
   "zh": "Chinês",
   "ar": "Árabe",
-  "af": "Africano"
+  "af": "Africâner"
 };
 
 for (let i = 0; i < selects.length; i++) {
