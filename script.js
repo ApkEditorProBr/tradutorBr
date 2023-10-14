@@ -49,9 +49,18 @@ btnLoadFile.addEventListener("click", () => {
   fileInput.click();
 });
 
+const allowedFormats = [".html", ".xml", ".text"];
+
 fileInput.addEventListener("change", () => {
   const file = fileInput.files[0];
   if (file) {
+    const fileExtension = file.name.toLowerCase().match(/\.[^.]+$/)[0];
+    const isValidFormat = allowedFormats.includes(fileExtension);
+    if (!isValidFormat) {
+      alert("Formato de arquivo inválido!");
+      return;
+    }
+
     const reader = new FileReader();
     reader.onload = function (e) {
       textareaFrom.value = e.target.result;
