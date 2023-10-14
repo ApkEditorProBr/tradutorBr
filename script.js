@@ -49,7 +49,7 @@ btnLoadFile.addEventListener("click", () => {
   fileInput.click();
 });
 
-const allowedFormats = [".html", ".xml", ".text"];
+const allowedFormats = [".html", ".xml", ".txt"];
 
 fileInput.addEventListener("change", () => {
   const file = fileInput.files[0];
