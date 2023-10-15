@@ -39,7 +39,7 @@ btnTranslate.addEventListener("click", () => {
   if (textareaFrom.value) {
     loadTranslation();
   } else {
-    textareaTo.value = "⚠️Não há nada!";
+    textareaTo.value = "⚠️Carregue algum arquivo!";
     textareaTo.style.color = "red";
     btnDownload.disabled = true;
   }
