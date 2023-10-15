@@ -1768,7 +1768,6 @@ function loadTranslation() {
  || chunk.includes("if (")
  || chunk.includes(") {")
  || chunk.includes("){")
- || chunk.includes("()")
  || chunk.includes("())")
  || chunk.includes("(false)")
  || chunk.includes("(true)")
