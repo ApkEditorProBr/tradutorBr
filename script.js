@@ -57,7 +57,8 @@ fileInput.addEventListener("change", () => {
     const fileExtension = file.name.toLowerCase().match(/\.[^.]+$/)[0];
     const isValidFormat = allowedFormats.includes(fileExtension);
     if (!isValidFormat) {
-      alert("Formato de arquivo inválido!");
+      textareaTo.value = "⚠️Formato de arquivo inválido!";
+      textareaTo.style.color = "red";
       return;
     }
 
