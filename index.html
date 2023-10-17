@@ -7,28 +7,59 @@
 <title>Tradutor</title>
 </head>
 <body>
-  <div class="container">
-    <h1>TRADUTOR</h1>
-        <select class="selectFrom"></select>
-        <select class="selectTo"></select>
-        <button id="btnLoadFile">CARREGAR ARQUIVO</button>
-        <br>
-        </br>
-<input type="checkbox" id="ignoreRestrictionsCheckbox">
-<label for="ignoreRestrictionsCheckbox">Tradução comum</label>
-        </br>
-        <input type="checkbox" id="RemoverTags" onchange="RemoverTags()">
-	  <label for="RemoverTags">Remover tag html</label>
+	
+  <div class="barra-superior">
+  <button class="btn1_2" id="btn1" class="ativa">ORIGINAL</button>
+    <button class="btn1_2" id="btn2">TRADUÇÃO</button>
+       <button id="btnLoadFile">CARREGAR ARQUIVO</button>
         <input type="file" id="fileInput" style="display: none;">
-        	<input type="text" id="additionalTagsInput" placeholder="html,head,title,body">
-        <textarea id="textareaFrom" rows="8" placeholder="Digitar texto"></textarea>
-        <textarea style="resize: none;"  id="textareaTo" rows="8" placeholder="Tradução..." disabled></textarea>
-        <br>
-        </br>
-        <button id="btnTranslate">TRADUZIR</button>
-        <button id="btnDownload" disabled>BAIXAR</button>
-	</div>
+        <button id="menuButton">&#x133EC;</button>
+        <button id="btnDownload" disabled>
+        BAIXAR
+       </button>
+        <button id="btnTranslate">TRADUZIR
+       </button>
+</div>
+
+
+        
+        <div id="aba1" class="aba mostrar">
+      <div class="editor">
+        <div id="vertical_number_line"></div>
+ <textarea id="textareaFrom" oninput="updateLineNumbers_to()" onscroll="syncScroll_to()" placeholder="EDITAR CONTEÚDO ORIGINAL!"></textarea>
+        
+      </div>
+    </div>
+  
+    <div id="aba2" class="aba">
+      <div class="editor">
+        <div id="vertical_number_line_to"></div>
+        <textarea id="textareaTo" oninput="updateLineNumbers()" onscroll="syncScroll()" placeholder="EDITAR CONTEÚDO TRADUZIDO!"></textarea>
+      </div>
+    </div>
+
+<div id="OcultarMenu">
+<div id="menu" class="menu_option">
+    <input type="text" id="additionalTagsInput" placeholder="html,head,title,body">
+    <br>
+    </br>
+    <select class="selectFrom"></select>
+    <select class="selectTo"></select>
+    <br>
+    </br>
+    <input type="checkbox" id="RemoverTag" onchange="RemoverTags()">
+	  <label for="RemoverTags
+">Remover tag html</label>
+    <br>
+    </br>
+    <label>
+    <input type="checkbox" id="ignoreRestrictionsCheckbox">
+    <label for="ignoreRestrictionsCheckbox">Tradução comum</label>
+</div>
+</div>
+
 <!-- Meu js -->
 <script src="script.js"></script>
+<script src="Transition.js"></script>
 </body>
 </html>
