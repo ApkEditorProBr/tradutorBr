@@ -1,3 +1,7 @@
+body {
+  user-select: none;
+}
+
 .barra-superior {
 background-color: #3F51B5;
 padding: 10px;
