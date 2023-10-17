@@ -49,25 +49,30 @@ btnLoadFile.addEventListener("click", () => {
   fileInput.click();
 });
 
-const allowedFormats = [".html", ".htm", ".xml", ".txt"];
-
 fileInput.addEventListener("change", () => {
   const file = fileInput.files[0];
-  if (file) {
+  const reader = new FileReader();
+
+  reader.addEventListener("load", () => {
+    const content = reader.result;
+
+    document.getElementById('textareaFrom').value = content;
+    updateLineNumbers("textareaFrom", "vertical_number_line");
+
+    const allowedFormats = [".html", ".htm", ".xml", ".txt"];
+
     const fileExtension = file.name.toLowerCase().match(/\.[^.]+$/)[0];
     const isValidFormat = allowedFormats.includes(fileExtension);
     if (!isValidFormat) {
-      textareaTo.value = "⚠️Formato de arquivo inválido!";
-      textareaTo.style.color = "red";
+      textareaTo.value = "⚠️Formato de arquivo inválido, apenas arquivos com as extensões .html, .htm, .xml e .txt são permitidos.";
+      textareaTo.style.color = "black";
+      textareaFrom.value = "⚠️Formato de arquivo inválido, apenas arquivos com as extensões .html, .htm, .xml e .txt são permitidos.";
+      textareaFrom.style.color = "black";
       return;
     }
+  });
 
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      textareaFrom.value = e.target.result;
-    };
-    reader.readAsText(file);
-  }
+  reader.readAsText(file);
 });
 
 btnDownload.addEventListener("click", () => {
@@ -85,7 +90,7 @@ btnDownload.addEventListener("click", () => {
 });
 
 function RemoverTags() {
-  var checkbox = document.getElementById("RemoverTags");
+  var checkbox = document.getElementById("RemoverTag");
   var textarea = document.getElementById("textareaTo");
 
   var conteudo = textarea.value;
@@ -1799,15 +1804,62 @@ function loadTranslation() {
   }, 500);
 
   Promise.all(promises)
-    .then((translations) => {
-      clearInterval(loadingInterval);
-      textareaTo.value = translations.join("\n");
-      btnDownload.disabled = false;
-    })
-    .catch((error) => {
-      clearInterval(loadingInterval);
-      textareaTo.value = "";
-      btnDownload.disabled = true;
-      console.error(error);
-    })
+  .then((translations) => {
+    clearInterval(loadingInterval);
+    textareaTo.value = translations.join("\n");
+    btnDownload.disabled = false;
+
+    const content = textareaTo.value;
+    document.getElementById('textareaTo').value = content;
+    updateLineNumbers("textareaTo", "vertical_number_line_to");
+  })
+  .catch((error) => {
+    clearInterval(loadingInterval);
+    textareaTo.value = "";
+    btnDownload.disabled = true;
+    console.error(error);
+  });
 }
+
+function updateLineNumbers(elementId, lineNumberDivId) {
+  let lineNumberDiv = document.getElementById(lineNumberDivId);
+  let editorContent = document.getElementById(elementId);
+
+  let lines = editorContent.value.split("\n");
+  let lineNumbers = "";
+
+  for (let i = 1; i <= lines.length; i++) {
+    lineNumbers += i + "\n";
+  }
+
+  lineNumberDiv.innerText = lineNumbers;
+}
+
+function syncScroll(elementId, lineNumberDivId) {
+  let lineNumberDiv = document.getElementById(lineNumberDivId);
+  let editorContent = document.getElementById(elementId);
+
+  lineNumberDiv.scrollTop = editorContent.scrollTop;
+}
+
+window.addEventListener("DOMContentLoaded", function() {
+  updateLineNumbers("textareaFrom", "vertical_number_line");
+
+  document.getElementById("textareaFrom").addEventListener("input", function() {
+    updateLineNumbers("textareaFrom", "vertical_number_line");
+  });
+  
+  document.getElementById("textareaFrom").addEventListener("scroll", function() {
+    syncScroll("textareaFrom", "vertical_number_line");
+  });
+
+  updateLineNumbers("textareaTo", "vertical_number_line_to");
+  
+  document.getElementById("textareaTo").addEventListener("input", function() {
+    updateLineNumbers("textareaTo", "vertical_number_line_to");
+  });
+  
+  document.getElementById("textareaTo").addEventListener("scroll", function() {
+    syncScroll("textareaTo", "vertical_number_line_to");
+  });
+});
