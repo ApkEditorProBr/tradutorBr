@@ -3,10 +3,10 @@ body {
 }
 
 .barra-superior {
-background-color: #3F51B5;
-padding: 10px;
-width: 324px;
-height: 20px;
+  background-color: #3F51B5;
+  padding: 10px;
+  width: 324px;
+  height: 20px;
 }
 
 .barra-superior .btn1_2 {
@@ -77,8 +77,8 @@ height: 20px;
 
 #btnTranslate {
  position: relative; 
-  bottom: 0px; /* move o elemento 20 pixels para baixo */
-  transform: translateX(-30%); /* opcional: centraliza o elemento horizontalmente */
+  bottom: 0px;
+  transform: translateX(-30%);
 }
 
 #btnDownload {
@@ -133,44 +133,63 @@ select {
 }
 
 .editor {
-position: fixed;
-background-color: white;
-width: 95%;
-height: 90%;
-display: flex;
-border: none;
-margin: auto;
-padding: none;
-border: 1px solid #D1D1D1;
+ position: fixed;
+ background-color: white;
+ width: 95%;
+ height: 90%;
+ display: flex;
+ border: none;
+ margin: auto;
+ padding: none;
+ border: 1px solid #D1D1D1;
 }
 
 #vertical_number_line, #vertical_number_line_to {
-background-color: white;
-height: none;
-padding: 3%;
-width: none; /* Alterado para ajustar os números */
-font-size: 15px;
-color: #8A8A8C;
-white-space: pre-line;
-overflow-y: hidden;
-border-right: 1px solid #D1D1D1;
-position: relative;
+ background-color: white;
+ height: none;
+ padding: 3%;
+ width: none;
+ font-size: 15px;
+ color: #8A8A8C;
+ white-space: pre-line;
+ overflow-y: hidden;
+ border-right: 1px solid #D1D1D1;
+ position: relative;
 }
 
-#textareaFrom, #textareaTo {
-resize: none;
-width: calc(100% - 45px); /* Alterado para ajustar o tamanho do textarea */
-color: black;
-outline: none;
-background-color: white;
-border: none;
-padding: 9px;
-font-family: normal;
-font-size: 16px;
-scrollbar-width: thin;
-scrollbar-color: gold transparent;
-overflow-y: auto;
-overflow: auto;
+#textareaFrom,
+#textareaTo {
+ resize: none;
+ width: calc(100% - 45px);
+ color: black;
+ outline: none;
+ background-color: white;
+ border: none;
+ padding: 9px;
+ font-family: normal;
+ font-size: 16px;
+ scrollbar-width: thin;
+ scrollbar-color: gold transparent;
+ overflow-y: auto;
+ overflow: auto;
+}
+
+
+
+/* Estilização da barra de rolagem do textarea */
+textarea::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Estilização do polegar da barra de rolagem do textarea */
+textarea::-webkit-scrollbar-thumb {
+  background-color: #3F51B5;
+  border-radius: 2px; 
+}
+
+/* Estilização da faixa de rolagem da barra do textarea */
+textarea::-webkit-scrollbar-track {
+  background-color: white;
 }
 
 @media (min-width: 768px) {
@@ -185,7 +204,7 @@ overflow: auto;
 }
 
 #textareaFrom, #textareaTo {
-width: calc(100% - 50px); /* Alterado para ajustar o tamanho do textarea */
+width: calc(100% - 50px);
 font-size: 15px;
    }
 }
