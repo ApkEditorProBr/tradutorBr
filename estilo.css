@@ -17,6 +17,7 @@ body {
   margin-right: 10px;
   cursor: pointer;
   border-bottom: 2px solid grey;
+  transition: border-bottom 2s ease;
 }
 
 .barra-superior .btn1_2.ativa {
