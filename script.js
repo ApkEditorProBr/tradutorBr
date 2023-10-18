@@ -1769,19 +1769,13 @@ function loadTranslation() {
  || chunk.includes("public static")
  || chunk.includes("(this)")
  || chunk.includes("if(")
- || chunk.includes("case ")
  || chunk.includes("if (")
  || chunk.includes(") {")
  || chunk.includes("){")
- || chunk.includes("())")
  || chunk.includes("(false)")
  || chunk.includes("(true)")
  || chunk.includes("true;")
- || chunk.includes("false;")
- || chunk.includes("return ")
- || chunk.includes("private ")
- || chunk.includes(" = ")
- || chunk.includes("int "));
+ || chunk.includes("false;"));
     const ignoreRestrictions = document.getElementById("ignoreRestrictionsCheckbox").checked;
 
     if (includesTags && !ignoreRestrictions) {
