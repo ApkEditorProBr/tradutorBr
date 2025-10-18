@@ -1,2 +1,5 @@
 # tradutorBr
-Tradutor para arquivos
+
+#Autor: BruMarti
+
+Ferramenta criada para traduzir arquivos
