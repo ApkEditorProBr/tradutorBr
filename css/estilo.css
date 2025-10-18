@@ -182,7 +182,7 @@ select {
  font-family: normal;
  font-size: 16px;
  scrollbar-width: thin;
- scrollbar-color: gold transparent;
+ scrollbar-color: #3F51B5 transparent;
  overflow-y: auto;
  overflow: auto;
 }
