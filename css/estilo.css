@@ -1,0 +1,223 @@
+body {
+  user-select: none;
+}
+
+.barra-superior {
+  background-color: #3F51B5;
+  padding: 10px;
+  width: 324px;
+  height: 20px;
+}
+
+.barra-superior .btn1_2 {
+  color: white;
+  background-color: transparent;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-bottom: 2px solid grey;
+  transition: border-bottom 2s ease;
+}
+
+.barra-superior .btn1_2.ativa {
+  border-bottom: 2px solid orange;
+}
+
+.barra-superior .btn1_2:hover {
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.aba, .hide {
+  display: none;
+}
+
+#aba2 {
+	
+}
+
+.mostrar {
+  display: block;
+}
+
+#btn1 {
+  float: left;
+  margin-left: -5px;
+  margin: -2px;
+}
+
+#btn2 {
+  float: left;
+  margin: -2px;
+
+}
+
+#additionalTagsInput {
+  width: auto;
+  height: 5px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 5px;
+  box-shadow: 0 0 4px #666;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.menu_option {
+  display: none;
+  width: 230px;
+  height: none;
+}
+
+#menu {
+  width: auto;
+  left: 20px;
+  background-color: #3F51B5;
+  color: white;
+  border: 1px solid #3F51B5;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.show {
+  display: block;
+  position: absolute;
+  background: white;
+  padding: 10px;
+}
+
+#btnTranslate {
+ position: relative; 
+  bottom: 0px;
+  transform: translateX(-30%);
+}
+
+#btnDownload {
+ position: relative; 
+  bottom: 0px;
+  transform: translateX(-20%);
+}
+
+#RemoverTags {
+}
+
+#menuButton {
+ background-color: rgb(0, 0, 0, 0.0);
+ border: none;
+ color: white;
+ cursor: none;
+ float: right;
+ font-size: 20px;
+ position: relative; 
+ bottom: 9px;
+  transform: translateX(-10%);
+}
+
+#btnDownload,
+#btnTranslate,
+#btnLoadFile {
+  font-size: 10px;
+  background-color: rgb(0, 0, 0, 0.0);
+  color: white;
+  box-shadow: 0 0 4px #666;
+  border: 1px solid white;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+.selectFrom {
+  margin-left: -88px;
+  visibility: hidden;
+  display: none;
+}
+
+select {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 4px #666;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editor {
+ left: 20px;
+ position: fixed;
+ background-color: none;
+ width: 89%;
+ height: 90%;
+ display: flex;
+ border: none;
+ margin: auto;
+ padding: none;
+ border: 1px solid #D1D1D1;
+}
+
+#vertical_number_line, #vertical_number_line_to {
+ background-color: white;
+ height: none;
+ padding: 3%;
+ width: none;
+ font-size: 15px;
+ color: #8A8A8C;
+ white-space: pre-line;
+ overflow-y: hidden;
+ border-right: 1px solid #D1D1D1;
+ position: relative;
+}
+
+#textareaFrom,
+#textareaTo {
+ resize: none;
+ width: calc(100% - 45px);
+ color: black;
+ outline: none;
+ background-color: white;
+ border: none;
+ padding: 9px;
+ font-family: normal;
+ font-size: 16px;
+ scrollbar-width: thin;
+ scrollbar-color: gold transparent;
+ overflow-y: auto;
+ overflow: auto;
+}
+
+
+
+/* Estilização da barra de rolagem do textarea */
+textarea::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Estilização do polegar da barra de rolagem do textarea */
+textarea::-webkit-scrollbar-thumb {
+  background-color: #3F51B5;
+  border-radius: 2px; 
+}
+
+/* Estilização da faixa de rolagem da barra do textarea */
+textarea::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+@media (min-width: 768px) {
+#vertical_number_line {
+  width: 40px;
+  font-size: 40px;
+}
+
+.barra-superior {
+   width: 95%;
+   height: 20px;
+}
+
+#textareaFrom, #textareaTo {
+   width: calc(100% - 50px);
+   font-size: 15px;
+   }
+}
